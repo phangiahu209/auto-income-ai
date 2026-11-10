@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Auto Income AI - trung tâm quản lý nội dung và phát triển tài sản số.">
+  <title>Auto Income AI | Trung tâm vận hành</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">A</span> AUTO INCOME <b>AI</b></a>
+    <nav><a href="#dashboard">Tổng quan</a><a href="#studio">Content Studio</a><a href="#income">Theo dõi thu nhập</a></nav>
+    <span class="status"><i></i> Bản thử nghiệm</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR DIGITAL BUSINESS WORKSPACE</p>
+        <h1>Xây tài sản số.<br><span>Tự động hóa từng bước.</span></h1>
+        <p class="lead">Một nơi để lên kế hoạch nội dung, theo dõi nguồn thu và xây dựng website có thể phát triển lâu dài.</p>
+        <a class="button primary" href="#dashboard">Mở bảng điều khiển</a>
+        <p class="note">Lưu ý: website hiện là bản MVP. Chưa tự đăng bài, chưa kết nối quảng cáo hay thanh toán.</p>
+      </div>
+      <div class="hero-card">
+        <div class="card-top"><span>WORKSPACE OVERVIEW</span><span class="pulse">● ONLINE</span></div>
+        <div class="metric-grid">
+          <div class="metric"><small>Nội dung đã lên kế hoạch</small><strong id="plannedCount">0</strong></div>
+          <div class="metric"><small>Nguồn thu đang thử nghiệm</small><strong>03</strong></div>
+          <div class="metric"><small>Doanh thu đã ghi nhận</small><strong id="heroRevenue">0 ₫</strong></div>
+          <div class="metric"><small>Chế độ vận hành</small><strong class="small-strong">Có kiểm soát</strong></div>
+        </div>
+        <div class="progress-label"><span>Mục tiêu xây dựng nền tảng</span><b>Giai đoạn 1/4</b></div>
+        <div class="progress"><span></span></div>
+      </div>
+    </section>
+
+    <section id="dashboard" class="section">
+      <div class="section-heading"><div><p class="eyebrow">CONTROL CENTER</p><h2>Bảng điều khiển</h2></div><p>Quản lý những việc quan trọng tại một nơi.</p></div>
+      <div class="cards">
+        <article class="feature"><div class="icon">✍️</div><h3>Lập kế hoạch nội dung</h3><p>Lưu ý tưởng bài viết và trạng thái sản xuất.</p><a href="#studio">Mở Content Studio →</a></article>
+        <article class="feature"><div class="icon">📈</div><h3>Theo dõi thu nhập</h3><p>Ghi lại doanh thu thực tế từ từng nguồn.</p><a href="#income">Mở sổ thu nhập →</a></article>
+        <article class="feature"><div class="icon">🔎</div><h3>SEO & tăng trưởng</h3><p>Chuẩn bị nội dung hữu ích, rõ nguồn và thân thiện tìm kiếm.</p><a href="#roadmap">Xem lộ trình →</a></article>
+      </div>
+    </section>
+
+    <section id="studio" class="section panel">
+      <div class="section-heading"><div><p class="eyebrow">CONTENT STUDIO</p><h2>Máy tạo ý tưởng nội dung</h2></div><p>Tạo bản nháp để bạn kiểm tra và chỉnh sửa trước khi đăng.</p></div>
+      <div class="generator">
+        <label for="topic">Chủ đề bạn muốn viết</label>
+        <input id="topic" type="text" placeholder="Ví dụ: Văn hóa La Hủ, mẹo học tập, công nghệ AI...">
+        <label for="format">Dạng nội dung</label>
+        <select id="format"><option value="article">Bài viết hướng dẫn</option><option value="list">Danh sách mẹo hữu ích</option><option value="social">Bài đăng mạng xã hội</option></select>
+        <button class="button primary" id="generate">Tạo dàn ý</button>
+        <div id="draft" class="draft" aria-live="polite">Dàn ý sẽ xuất hiện tại đây.</div>
+        <button class="button secondary" id="copyDraft">Sao chép dàn ý</button>
+      </div>
+    </section>
+
+    <section id="income" class="section">
+      <div class="section-heading"><div><p class="eyebrow">INCOME TRACKER</p><h2>Sổ theo dõi thu nhập</h2></div><p>Chỉ nhập khoản tiền đã thực sự nhận được.</p></div>
+      <div class="income-layout">
+        <form id="incomeForm" class="income-form">
+          <label for="source">Nguồn thu</label>
+          <select id="source"><option>Tiếp thị liên kết</option><option>Quảng cáo</option><option>Sản phẩm số</option><option>Dịch vụ</option><option>Khác</option></select>
+          <label for="amount">Số tiền (VNĐ)</label>
+          <input id="amount" type="number" min="1" step="1" placeholder="Ví dụ: 50000" required>
+          <label for="incomeDate">Ngày nhận</label>
+          <input id="incomeDate" type="date" required>
+          <button class="button primary" type="submit">Thêm khoản thu</button>
+        </form>
+        <div class="income-summary">
+          <div class="total-box"><small>Tổng thu đã ghi nhận</small><strong id="totalIncome">0 ₫</strong></div>
+          <div id="incomeList" class="income-list"><p class="empty">Chưa có khoản thu nào.</p></div>
+          <button id="clearIncome" class="text-button">Xóa dữ liệu thu nhập trên thiết bị này</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap" class="section roadmap">
+      <div class="section-heading"><div><p class="eyebrow">BUILD IN STAGES</p><h2>Lộ trình phát triển</h2></div></div>
+      <div class="steps">
+        <div><b>01</b><h3>Dựng nền tảng</h3><p>Hoàn thiện giao diện, chọn chủ đề và xuất bản website.</p><span class="tag current">Đang thực hiện</span></div>
+        <div><b>02</b><h3>Tạo nội dung thật</h3><p>Đăng bài có ích, tự viết hoặc dùng AI hỗ trợ và kiểm tra kỹ.</p><span class="tag">Tiếp theo</span></div>
+        <div><b>03</b><h3>Kết nối nguồn thu</h3><p>Tìm hiểu điều kiện của nền tảng quảng cáo, affiliate và thanh toán.</p><span class="tag">Chưa bắt đầu</span></div>
+        <div><b>04</b><h3>Tự động hóa</h3><p>Kết nối lịch đăng, phân tích truy cập và cảnh báo lỗi.</p><span class="tag">Chưa bắt đầu</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="brand"><span class="brand-mark">A</span> AUTO INCOME <b>AI</b></div><p>Phát triển bền vững bằng nội dung hữu ích và minh bạch.</p><small>Không cam kết thu nhập. Không sử dụng lượt truy cập, đánh giá hoặc doanh thu giả.</small></footer>
+  <script src="app.js"></script>
+</body>
+</html>
